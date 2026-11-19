@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-19T09:09:36.775Z",
+  "generatedAt": "2026-11-19T09:32:13.210Z",
   "banks": [
     {
       "id": "tbank",
@@ -15,11 +15,15 @@
         "transactions"
       ],
       "sortOrder": 1,
+      "logo": {
+        "url": "logos/tbank.png",
+        "sha256": "e5d267e746e4aa70ad03d7807a543eeeb11203313985b3bab2e7dd864ca22424"
+      },
       "spec": {
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/tbank-1.0.0.ubx",
-        "sha256": "f784184cf16e1ac024bf125e5e7ac810670ba6b4f7ec34523bfd972c1a835849",
+        "sha256": "b7d4f54ae27ff9bf5a73c8e42b7ac281ce26883db36d938989cc51615160d01a",
         "size": 54870,
         "keyId": "dev-2026-11"
       }
@@ -37,11 +41,15 @@
         "transactions"
       ],
       "sortOrder": 2,
+      "logo": {
+        "url": "logos/vtb.png",
+        "sha256": "72a665c8f262dd4db5408f3b7b220dbbc14ee8aa3f2931cbdeb5ee6464dc9445"
+      },
       "spec": {
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/vtb-1.0.0.ubx",
-        "sha256": "67dd379e27547dd91166bc0d9d3e9f16ba66b439b9d10903203785ba27dbafd3",
+        "sha256": "bc1c9a426ea15d348352f0836ca9f0fb28408413979d2926ebc3bd49491eba0e",
         "size": 13390,
         "keyId": "dev-2026-11"
       }
@@ -59,11 +67,15 @@
         "transactions"
       ],
       "sortOrder": 3,
+      "logo": {
+        "url": "logos/alfa.png",
+        "sha256": "e53214db35215a081e1a1003cec48f6163c9fd1fde7191f90c198bf1f9796df0"
+      },
       "spec": {
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/alfa-1.0.0.ubx",
-        "sha256": "45ba1d8dc00d8d097cb45275db73abdb67c179e84d244a6bd0ae9b25898a063f",
+        "sha256": "6c07330119dafbe5186ae79b4bc2a665b35fbcb57021d17c86b0738e6644c897",
         "size": 19359,
         "keyId": "dev-2026-11"
       }
@@ -81,11 +93,15 @@
         "transactions"
       ],
       "sortOrder": 4,
+      "logo": {
+        "url": "logos/mts.png",
+        "sha256": "aff4fa57e32b72126a9ac626219f2e76822b9074e3f647b333ec2f7d278b416b"
+      },
       "spec": {
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/mts-1.0.0.ubx",
-        "sha256": "0a2641bcaf908bd04e274b85857fec0420844a5a5fce256da4cded839b6158c8",
+        "sha256": "daa1c1d0116e9039867a846bbf9586080998c02b7a94cebf1a956fcbf3a5a9aa",
         "size": 15589,
         "keyId": "dev-2026-11"
       }
