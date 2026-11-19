@@ -7,15 +7,15 @@ sources and private keys live outside it.
 ## Layout
 
 ```
-catalog.json       exact bytes that are signed
-catalog.json.sig   detached Ed25519 signature (base64url)
+index.json         exact bytes that are signed
+index.json.sig     detached Ed25519 signature (base64url)
 specs/<id>-<ver>.ubx  XChaCha20-Poly1305 artifact (AAD: "<id>@<version>")
 logos/<id>.<ext>   optional, hash-pinned in the catalog
 ```
 
 ## How the app uses it
 
-1. Fetch `catalog.json` and verify the signature with the public key embedded in
+1. Fetch `index.json` and verify the signature with the public key embedded in
    the app.
 2. Pick a bank, download its `.ubx`, check `sha256`/size from the catalog.
 3. Decrypt with the key for `keyId` and validate against the spec schema.
