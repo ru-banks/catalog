@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-19T08:29:39.302Z",
+  "generatedAt": "2026-11-19T08:49:23.018Z",
   "banks": [
     {
       "id": "tbank",
@@ -19,7 +19,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/tbank-1.0.0.ubx",
-        "sha256": "2d33c2bca244dc988deb86ed36af37b31eb112859f522323ba8133267dd211a5",
+        "sha256": "8f3d199db939440f7bef27365312a641ff2dae1c0c2bfc271319b7eb45c80bff",
         "size": 54870,
         "keyId": "dev-2026-11"
       }
@@ -41,7 +41,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/vtb-1.0.0.ubx",
-        "sha256": "66cbaf1565e77c62d353c1bdb61a918c34ffc701ee8f6ec39d0ed50d598e8924",
+        "sha256": "5613783beaa52320da60fb5a238c989165441c711b00feab179f7703dd4e57c9",
         "size": 12946,
         "keyId": "dev-2026-11"
       }
@@ -63,8 +63,8 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/alfa-1.0.0.ubx",
-        "sha256": "bc4a9bfb504364652607019c54f08230bc506af1c6874458d27f719c065767b0",
-        "size": 19385,
+        "sha256": "3d8bba42916f7d3592f2ff9be6ca30e1989cd4c32d65593df44537991ecb7bba",
+        "size": 19359,
         "keyId": "dev-2026-11"
       }
     },
@@ -85,7 +85,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/mts-1.0.0.ubx",
-        "sha256": "1c4197eb1696f2acd05463700d3cc833bceea8bd6dc9e84565f5f9d23ad7327e",
+        "sha256": "84c3f60c02a9eb06bb47de30a9927052517ce4a6bfbcc7da8378ecfe0a5062f8",
         "size": 15589,
         "keyId": "dev-2026-11"
       }
