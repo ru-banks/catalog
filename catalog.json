@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-19T07:20:53.968Z",
+  "generatedAt": "2026-11-19T07:22:18.531Z",
   "banks": [
     {
       "id": "tbank",
@@ -8,7 +8,7 @@
       "shortName": "Т-Банк",
       "color": "#FFDD2D",
       "status": "beta",
-      "statusNote": "Чтение на записанных ответах; вход ещё не переведён на спеку.",
+      "statusNote": "Parity на записанных ответах и фейковом SSO; живой вход через спеку не проверялся.",
       "capabilities": [
         "accounts",
         "cards",
@@ -19,8 +19,8 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/tbank-1.0.0.ubx",
-        "sha256": "08649f434d38048af5e6aca578494a3371659879ac71e5f860699ff9360ff0a5",
-        "size": 54599,
+        "sha256": "2aa6a2ff078056bd1eb5f314b395114fea28d1cf6d84ecefcc81f7f845170255",
+        "size": 54629,
         "keyId": "dev-2026-11"
       }
     },
@@ -41,7 +41,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/vtb-1.0.0.ubx",
-        "sha256": "86019274179a1a1c4b08a9e534117401df6bb81dae3ff81a90fa41958bbacf2c",
+        "sha256": "d6efb5cb975d4a5be838274242fb6beac7856033458537a46d0ccf26ce1c41ed",
         "size": 12946,
         "keyId": "dev-2026-11"
       }
@@ -63,7 +63,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/alfa-1.0.0.ubx",
-        "sha256": "2807d0c592992d130e0caa5e0d88824f926d559593e269a7767054703675acad",
+        "sha256": "41f3eef0e923638526faf09e22dff7bebac01340dd5be35826c52c60f110033b",
         "size": 19434,
         "keyId": "dev-2026-11"
       }
@@ -85,7 +85,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/mts-1.0.0.ubx",
-        "sha256": "a42d4089f27828e66ec86719394ea0b9e930d9f40a0b3be2c5ad618dbbe35d7c",
+        "sha256": "feaa10b389a786df2a4f9e0f94d9445306d2b256d3163a5f035db810a51d18d3",
         "size": 15589,
         "keyId": "dev-2026-11"
       }
