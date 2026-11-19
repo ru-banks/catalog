@@ -1,0 +1,94 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-11-19T07:20:53.968Z",
+  "banks": [
+    {
+      "id": "tbank",
+      "name": "Т-Банк",
+      "shortName": "Т-Банк",
+      "color": "#FFDD2D",
+      "status": "beta",
+      "statusNote": "Чтение на записанных ответах; вход ещё не переведён на спеку.",
+      "capabilities": [
+        "accounts",
+        "cards",
+        "transactions"
+      ],
+      "sortOrder": 1,
+      "spec": {
+        "version": "1.0.0",
+        "minEngine": "0.1.0",
+        "url": "specs/tbank-1.0.0.ubx",
+        "sha256": "08649f434d38048af5e6aca578494a3371659879ac71e5f860699ff9360ff0a5",
+        "size": 54599,
+        "keyId": "dev-2026-11"
+      }
+    },
+    {
+      "id": "vtb",
+      "name": "ВТБ",
+      "shortName": "ВТБ",
+      "color": "#0057FF",
+      "status": "beta",
+      "statusNote": "Вход через страницу банка; проверено на живом аккаунте.",
+      "capabilities": [
+        "accounts",
+        "cards",
+        "transactions"
+      ],
+      "sortOrder": 2,
+      "spec": {
+        "version": "1.0.0",
+        "minEngine": "0.1.0",
+        "url": "specs/vtb-1.0.0.ubx",
+        "sha256": "86019274179a1a1c4b08a9e534117401df6bb81dae3ff81a90fa41958bbacf2c",
+        "size": 12946,
+        "keyId": "dev-2026-11"
+      }
+    },
+    {
+      "id": "alfa",
+      "name": "Альфа-Банк",
+      "shortName": "Альфа",
+      "color": "#EF3124",
+      "status": "beta",
+      "statusNote": "Вход через страницу банка; чтение — через плоский бизнес-API.",
+      "capabilities": [
+        "accounts",
+        "cards",
+        "transactions"
+      ],
+      "sortOrder": 3,
+      "spec": {
+        "version": "1.0.0",
+        "minEngine": "0.1.0",
+        "url": "specs/alfa-1.0.0.ubx",
+        "sha256": "2807d0c592992d130e0caa5e0d88824f926d559593e269a7767054703675acad",
+        "size": 19434,
+        "keyId": "dev-2026-11"
+      }
+    },
+    {
+      "id": "mts",
+      "name": "МТС Деньги",
+      "shortName": "МТС",
+      "color": "#E30611",
+      "status": "beta",
+      "statusNote": "Вход через страницу банка (PKCE); живой сессии пока нет.",
+      "capabilities": [
+        "accounts",
+        "cards",
+        "transactions"
+      ],
+      "sortOrder": 4,
+      "spec": {
+        "version": "1.0.0",
+        "minEngine": "0.1.0",
+        "url": "specs/mts-1.0.0.ubx",
+        "sha256": "a42d4089f27828e66ec86719394ea0b9e930d9f40a0b3be2c5ad618dbbe35d7c",
+        "size": 15589,
+        "keyId": "dev-2026-11"
+      }
+    }
+  ]
+}
