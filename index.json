@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-20T16:32:35.290Z",
+  "generatedAt": "2026-11-20T18:04:30.041Z",
   "banks": [
     {
       "id": "tbank",
@@ -23,7 +23,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/tbank-1.0.0.ubx",
-        "sha256": "e4a289ce1c8eaefec4019f740cdba1ffccbb48aead5746557cf9f91ecc476485",
+        "sha256": "fefa1b75562c350b0f6e71e4999496bff241b88c093083cd18aac9cb487240c9",
         "size": 55563,
         "keyId": "dev-2026-11"
       }
@@ -49,7 +49,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/vtb-1.0.0.ubx",
-        "sha256": "1e3ad0ec2ce7379e3111b4cc756251516c9d28dce7ec5141dd2639fd6b44837d",
+        "sha256": "49056ef82440fab1353ee391712104ab8927bebed67befd2f1e4c2f12b37d18a",
         "size": 13396,
         "keyId": "dev-2026-11"
       }
@@ -75,7 +75,7 @@
         "version": "1.1.0",
         "minEngine": "0.2.0",
         "url": "specs/alfa-1.1.0.ubx",
-        "sha256": "0f6fc2df9405866915e139e902d98d12122f3ee1ff292777194b59e29eb41d48",
+        "sha256": "4fe8757b90b3064e514a69a0040247dee4c4626910d691d1caa1e718aab068c3",
         "size": 23555,
         "keyId": "dev-2026-11"
       }
@@ -101,7 +101,7 @@
         "version": "1.1.1",
         "minEngine": "0.3.1",
         "url": "specs/mts-1.1.1.ubx",
-        "sha256": "4ee3b757c9db992eae85c1ab1625bdfa18a2406e8c7b0c44a6a505259f383d9a",
+        "sha256": "172d906e3e4317f6e9926b9773ddf6edba553101b922f4d03fb23894bfb6ba67",
         "size": 12805,
         "keyId": "dev-2026-11"
       }
@@ -123,7 +123,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/otp-1.0.0.ubx",
-        "sha256": "3d8001cdc1b8578369f394da133bfcf1a75ddf4e3e62b9f5721949907b0829da",
+        "sha256": "2c03af6b06d90f6004124506a671ddbdc1ad057e0be018edc821d75826ac1738",
         "size": 11518,
         "keyId": "dev-2026-11"
       }
@@ -144,7 +144,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/freedom-1.0.0.ubx",
-        "sha256": "447b0c4409b3bae4e327df63386be066cca8f185c9cd3c378c8b3aa89271b8c0",
+        "sha256": "c76b62b98cd6af136f4b53e38e76a0a866fde027d963aeb7429f3586a9458bd6",
         "size": 6760,
         "keyId": "dev-2026-11"
       }
@@ -155,18 +155,18 @@
       "shortName": "ДОМ.РФ",
       "color": "#8A2BE2",
       "status": "beta",
-      "statusNote": "Вход через страницу банка (SRP) и чтение счетов/карт проверены живой веб-сессией; сессия банка живёт ~5 минут, после паузы нужен повторный вход.",
+      "statusNote": "Мобильный вход (SRP + СМС) и offline refresh token на 90 дней проверены живой сессией; сертификат Минцифры должен быть в хранилище устройства.",
       "capabilities": [
         "accounts",
         "cards"
       ],
       "sortOrder": 7,
       "spec": {
-        "version": "1.0.0",
-        "minEngine": "0.3.2",
-        "url": "specs/domrf-1.0.0.ubx",
-        "sha256": "2f4783cd47f828dc5bcfdcf78945be4041f81053953776629e4caa43d10234bf",
-        "size": 3786,
+        "version": "2.0.0",
+        "minEngine": "0.3.4",
+        "url": "specs/domrf-2.0.0.ubx",
+        "sha256": "0b64936cefb52e124d4a526ff2aa35b0d35483afdd9de0779a26391f5836f029",
+        "size": 9937,
         "keyId": "dev-2026-11"
       }
     },
@@ -186,7 +186,7 @@
         "version": "1.0.0",
         "minEngine": "0.3.2",
         "url": "specs/ozon-1.0.0.ubx",
-        "sha256": "09e6a515dc939a6153d8918df9ad0a7836eebec561bca13315c76e3fd9dd37a5",
+        "sha256": "504dc9fb7cd400c6786735e324a51e9e3372d825fba08c85c601d32bce8eab67",
         "size": 5085,
         "keyId": "dev-2026-11"
       }
@@ -207,7 +207,7 @@
         "version": "1.0.0",
         "minEngine": "0.3.3",
         "url": "specs/sber-1.0.0.ubx",
-        "sha256": "61b0358ab612dc3c561c75e8ebc89f86cad583abbe59780b3699c3b5637410e0",
+        "sha256": "6f3f2495d29f4a02ff8401fc4323ee814ba1e5219af2b330bf7613402e30ce43",
         "size": 4667,
         "keyId": "dev-2026-11"
       }
@@ -227,7 +227,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/yandexpay-1.0.0.ubx",
-        "sha256": "8edcd58fadfc42e3b4a950007c97a872db653e298bfdd1cea3ac0c4bcfa0b451",
+        "sha256": "dfab9b0ff7e7d74597d416a552d8d0adefe3e03c43fba8c67aff8a69b2167ff1",
         "size": 3577,
         "keyId": "dev-2026-11"
       }
