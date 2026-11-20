@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-20T14:04:42.612Z",
+  "generatedAt": "2026-11-20T15:26:10.815Z",
   "banks": [
     {
       "id": "tbank",
@@ -23,7 +23,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/tbank-1.0.0.ubx",
-        "sha256": "bb2ab1aacbb463ee134b212822810b009e52d901780ebb27a4fcea1c8bc162b6",
+        "sha256": "3ffce866836432fc7679e4c186126c8465e0d87ef3c96e445aef08976bae68a9",
         "size": 55563,
         "keyId": "dev-2026-11"
       }
@@ -49,7 +49,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/vtb-1.0.0.ubx",
-        "sha256": "7e2009e034424064e9661fdfafad85098357bf7a6899dd88cc8773e596298689",
+        "sha256": "6669c2813c76823bd961835037c6b7969015a0437eaf5d5a8aef08f0ba70d5a5",
         "size": 13396,
         "keyId": "dev-2026-11"
       }
@@ -75,7 +75,7 @@
         "version": "1.1.0",
         "minEngine": "0.2.0",
         "url": "specs/alfa-1.1.0.ubx",
-        "sha256": "e7ffb812bb664a0d63d5971f066da6150e860fa7da71276009bc08941b88660c",
+        "sha256": "76b662bc3d4ae490bd070e309b9c12f4dd498b1dc87783bac37e25cc14c3f2f0",
         "size": 23555,
         "keyId": "dev-2026-11"
       }
@@ -101,8 +101,71 @@
         "version": "1.1.1",
         "minEngine": "0.3.1",
         "url": "specs/mts-1.1.1.ubx",
-        "sha256": "53d878da271ec9ab4d7696f0689638e68dee6e7d3efbb8f6b28147da0d13cf5d",
+        "sha256": "8024c758d9fa88bd753b094cc719c135ef01da5388e649950de781c968130fb4",
         "size": 12805,
+        "keyId": "dev-2026-11"
+      }
+    },
+    {
+      "id": "otp",
+      "name": "ОТП Банк",
+      "shortName": "ОТП",
+      "color": "#0A9B4B",
+      "status": "beta",
+      "statusNote": "Вход по СМС и чтение счетов проверены живым клиентом банка; первый вход с нового устройства требует подтверждения личности.",
+      "capabilities": [
+        "accounts",
+        "cards",
+        "transactions"
+      ],
+      "sortOrder": 5,
+      "spec": {
+        "version": "1.0.0",
+        "minEngine": "0.1.0",
+        "url": "specs/otp-1.0.0.ubx",
+        "sha256": "2bbbf2074663d696859fd01582ba2eb480a7475f33841a5266a66e029100b236",
+        "size": 11518,
+        "keyId": "dev-2026-11"
+      }
+    },
+    {
+      "id": "freedom",
+      "name": "Freedom Bank",
+      "shortName": "Freedom",
+      "color": "#0FBA6A",
+      "status": "beta",
+      "statusNote": "Вход по СМС и чтение счетов/карт проверены живым клиентом; история закрыта KYC-гейтом банка, тихого продления SID нет.",
+      "capabilities": [
+        "accounts",
+        "cards"
+      ],
+      "sortOrder": 6,
+      "spec": {
+        "version": "1.0.0",
+        "minEngine": "0.1.0",
+        "url": "specs/freedom-1.0.0.ubx",
+        "sha256": "b4a45e65d73390cb35676986baa9b22f675b320e3eda46be39e110081a61fc36",
+        "size": 6760,
+        "keyId": "dev-2026-11"
+      }
+    },
+    {
+      "id": "yandexpay",
+      "name": "Яндекс Пэй",
+      "shortName": "Яндекс Пэй",
+      "color": "#FC3F1D",
+      "status": "beta",
+      "statusNote": "Вход через Яндекс ID и чтение кошелька/баланса проверены живой сессией; карты и профиль требуют PIN-токен.",
+      "capabilities": [
+        "accounts"
+      ],
+      "sortOrder": 7,
+      "spec": {
+        "version": "1.0.0",
+        "minEngine": "0.1.0",
+        "url": "specs/yandexpay-1.0.0.ubx",
+        "sha256": "b3931eb91616bcadd247e2cea9b231d8230eb2641e3d9fea0774cdde0dd215bf",
+        "size": 3577,
         "keyId": "dev-2026-11"
       }
     }
