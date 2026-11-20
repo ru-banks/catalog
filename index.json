@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-20T15:26:10.815Z",
+  "generatedAt": "2026-11-20T16:17:02.515Z",
   "banks": [
     {
       "id": "tbank",
@@ -23,7 +23,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/tbank-1.0.0.ubx",
-        "sha256": "3ffce866836432fc7679e4c186126c8465e0d87ef3c96e445aef08976bae68a9",
+        "sha256": "7af59616aa13b297ddacf150bf7eef39f1863c05f38046885988815d515adefe",
         "size": 55563,
         "keyId": "dev-2026-11"
       }
@@ -49,7 +49,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/vtb-1.0.0.ubx",
-        "sha256": "6669c2813c76823bd961835037c6b7969015a0437eaf5d5a8aef08f0ba70d5a5",
+        "sha256": "18c1e69527fb654024b051a44c0ff7c97e79c02daf6e3fd79d836c578000f156",
         "size": 13396,
         "keyId": "dev-2026-11"
       }
@@ -75,7 +75,7 @@
         "version": "1.1.0",
         "minEngine": "0.2.0",
         "url": "specs/alfa-1.1.0.ubx",
-        "sha256": "76b662bc3d4ae490bd070e309b9c12f4dd498b1dc87783bac37e25cc14c3f2f0",
+        "sha256": "ff555d1cf13cb8a7bb10486fe3c8aacad5a01cb18869b7992c690b6b737eb0e8",
         "size": 23555,
         "keyId": "dev-2026-11"
       }
@@ -101,7 +101,7 @@
         "version": "1.1.1",
         "minEngine": "0.3.1",
         "url": "specs/mts-1.1.1.ubx",
-        "sha256": "8024c758d9fa88bd753b094cc719c135ef01da5388e649950de781c968130fb4",
+        "sha256": "a6672954ff12018da7e78b085ba9fa3406ffc72b9709567b44327592c4b442a1",
         "size": 12805,
         "keyId": "dev-2026-11"
       }
@@ -123,7 +123,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/otp-1.0.0.ubx",
-        "sha256": "2bbbf2074663d696859fd01582ba2eb480a7475f33841a5266a66e029100b236",
+        "sha256": "abbd26244a6401dd41d30e5a5ba2f09b4ed3a68b52a569e2a83ecdded8366396",
         "size": 11518,
         "keyId": "dev-2026-11"
       }
@@ -144,8 +144,50 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/freedom-1.0.0.ubx",
-        "sha256": "b4a45e65d73390cb35676986baa9b22f675b320e3eda46be39e110081a61fc36",
+        "sha256": "1d17effac8e011fda3bbc70b108f5ad4f0e9369e5d6b8acfa63f517d25e74af8",
         "size": 6760,
+        "keyId": "dev-2026-11"
+      }
+    },
+    {
+      "id": "domrf",
+      "name": "Банк ДОМ.РФ",
+      "shortName": "ДОМ.РФ",
+      "color": "#8A2BE2",
+      "status": "beta",
+      "statusNote": "Вход через страницу банка (SRP) и чтение счетов/карт проверены живой веб-сессией; сессия банка живёт ~5 минут, после паузы нужен повторный вход.",
+      "capabilities": [
+        "accounts",
+        "cards"
+      ],
+      "sortOrder": 7,
+      "spec": {
+        "version": "1.0.0",
+        "minEngine": "0.3.2",
+        "url": "specs/domrf-1.0.0.ubx",
+        "sha256": "3c3e53b2696bd272936e5975cfb5ba80104b55712c2dbfbb42546fdfc53df1d8",
+        "size": 3786,
+        "keyId": "dev-2026-11"
+      }
+    },
+    {
+      "id": "ozon",
+      "name": "Ozon Банк",
+      "shortName": "Ozon",
+      "color": "#005BFF",
+      "status": "beta",
+      "statusNote": "Вход через страницу Ozon ID (код из пуша) и код-пароль банка; счета и карты читаются живой веб-сессией.",
+      "capabilities": [
+        "accounts",
+        "cards"
+      ],
+      "sortOrder": 8,
+      "spec": {
+        "version": "1.0.0",
+        "minEngine": "0.3.2",
+        "url": "specs/ozon-1.0.0.ubx",
+        "sha256": "7a697cd8c082b0eab856cb81dfaaf2d0610b8dbe631f19f4a79b738b04398e4b",
+        "size": 5085,
         "keyId": "dev-2026-11"
       }
     },
@@ -159,12 +201,12 @@
       "capabilities": [
         "accounts"
       ],
-      "sortOrder": 7,
+      "sortOrder": 9,
       "spec": {
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/yandexpay-1.0.0.ubx",
-        "sha256": "b3931eb91616bcadd247e2cea9b231d8230eb2641e3d9fea0774cdde0dd215bf",
+        "sha256": "5abe374f77a3f8e68e0e07d6f0ae86a639e0a573cc097cd9258b7e0453b58d0a",
         "size": 3577,
         "keyId": "dev-2026-11"
       }
