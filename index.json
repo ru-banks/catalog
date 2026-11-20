@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-20T16:17:02.515Z",
+  "generatedAt": "2026-11-20T16:32:35.290Z",
   "banks": [
     {
       "id": "tbank",
@@ -23,7 +23,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/tbank-1.0.0.ubx",
-        "sha256": "7af59616aa13b297ddacf150bf7eef39f1863c05f38046885988815d515adefe",
+        "sha256": "e4a289ce1c8eaefec4019f740cdba1ffccbb48aead5746557cf9f91ecc476485",
         "size": 55563,
         "keyId": "dev-2026-11"
       }
@@ -49,7 +49,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/vtb-1.0.0.ubx",
-        "sha256": "18c1e69527fb654024b051a44c0ff7c97e79c02daf6e3fd79d836c578000f156",
+        "sha256": "1e3ad0ec2ce7379e3111b4cc756251516c9d28dce7ec5141dd2639fd6b44837d",
         "size": 13396,
         "keyId": "dev-2026-11"
       }
@@ -75,7 +75,7 @@
         "version": "1.1.0",
         "minEngine": "0.2.0",
         "url": "specs/alfa-1.1.0.ubx",
-        "sha256": "ff555d1cf13cb8a7bb10486fe3c8aacad5a01cb18869b7992c690b6b737eb0e8",
+        "sha256": "0f6fc2df9405866915e139e902d98d12122f3ee1ff292777194b59e29eb41d48",
         "size": 23555,
         "keyId": "dev-2026-11"
       }
@@ -101,7 +101,7 @@
         "version": "1.1.1",
         "minEngine": "0.3.1",
         "url": "specs/mts-1.1.1.ubx",
-        "sha256": "a6672954ff12018da7e78b085ba9fa3406ffc72b9709567b44327592c4b442a1",
+        "sha256": "4ee3b757c9db992eae85c1ab1625bdfa18a2406e8c7b0c44a6a505259f383d9a",
         "size": 12805,
         "keyId": "dev-2026-11"
       }
@@ -123,7 +123,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/otp-1.0.0.ubx",
-        "sha256": "abbd26244a6401dd41d30e5a5ba2f09b4ed3a68b52a569e2a83ecdded8366396",
+        "sha256": "3d8001cdc1b8578369f394da133bfcf1a75ddf4e3e62b9f5721949907b0829da",
         "size": 11518,
         "keyId": "dev-2026-11"
       }
@@ -144,7 +144,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/freedom-1.0.0.ubx",
-        "sha256": "1d17effac8e011fda3bbc70b108f5ad4f0e9369e5d6b8acfa63f517d25e74af8",
+        "sha256": "447b0c4409b3bae4e327df63386be066cca8f185c9cd3c378c8b3aa89271b8c0",
         "size": 6760,
         "keyId": "dev-2026-11"
       }
@@ -165,7 +165,7 @@
         "version": "1.0.0",
         "minEngine": "0.3.2",
         "url": "specs/domrf-1.0.0.ubx",
-        "sha256": "3c3e53b2696bd272936e5975cfb5ba80104b55712c2dbfbb42546fdfc53df1d8",
+        "sha256": "2f4783cd47f828dc5bcfdcf78945be4041f81053953776629e4caa43d10234bf",
         "size": 3786,
         "keyId": "dev-2026-11"
       }
@@ -186,8 +186,29 @@
         "version": "1.0.0",
         "minEngine": "0.3.2",
         "url": "specs/ozon-1.0.0.ubx",
-        "sha256": "7a697cd8c082b0eab856cb81dfaaf2d0610b8dbe631f19f4a79b738b04398e4b",
+        "sha256": "09e6a515dc939a6153d8918df9ad0a7836eebec561bca13315c76e3fd9dd37a5",
         "size": 5085,
+        "keyId": "dev-2026-11"
+      }
+    },
+    {
+      "id": "sber",
+      "name": "СберБанк",
+      "shortName": "Сбер",
+      "color": "#21A038",
+      "status": "beta",
+      "statusNote": "Вход по карте/СМС и чтение счетов проверены живой веб-сессией; сессия банка короткая, после паузы нужен повторный вход.",
+      "capabilities": [
+        "accounts",
+        "cards"
+      ],
+      "sortOrder": 9,
+      "spec": {
+        "version": "1.0.0",
+        "minEngine": "0.3.3",
+        "url": "specs/sber-1.0.0.ubx",
+        "sha256": "61b0358ab612dc3c561c75e8ebc89f86cad583abbe59780b3699c3b5637410e0",
+        "size": 4667,
         "keyId": "dev-2026-11"
       }
     },
@@ -201,12 +222,12 @@
       "capabilities": [
         "accounts"
       ],
-      "sortOrder": 9,
+      "sortOrder": 10,
       "spec": {
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/yandexpay-1.0.0.ubx",
-        "sha256": "5abe374f77a3f8e68e0e07d6f0ae86a639e0a573cc097cd9258b7e0453b58d0a",
+        "sha256": "8edcd58fadfc42e3b4a950007c97a872db653e298bfdd1cea3ac0c4bcfa0b451",
         "size": 3577,
         "keyId": "dev-2026-11"
       }
