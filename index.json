@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-19T10:32:55.658Z",
+  "generatedAt": "2026-11-20T13:39:33.114Z",
   "banks": [
     {
       "id": "tbank",
@@ -23,8 +23,8 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/tbank-1.0.0.ubx",
-        "sha256": "56bef7365dbaba316df1f5a32fff1f1b6c4283948b3a76048844e41e4eb48a9d",
-        "size": 54870,
+        "sha256": "b1a095de810a4dfd6d541899289cbe6f8d5ae3c95b197b7f8a166f7e9304bfd3",
+        "size": 55563,
         "keyId": "dev-2026-11"
       }
     },
@@ -49,8 +49,8 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/vtb-1.0.0.ubx",
-        "sha256": "1f8de79085890dcd0bf0abb0e05ff85a60672619fe440cfccf0adf5bdf73a1ef",
-        "size": 13390,
+        "sha256": "1c24ad20abcdc54d722f79a286ef44464e6420deb3a6a443cedd5f57b331b804",
+        "size": 13396,
         "keyId": "dev-2026-11"
       }
     },
@@ -72,11 +72,11 @@
         "sha256": "e53214db35215a081e1a1003cec48f6163c9fd1fde7191f90c198bf1f9796df0"
       },
       "spec": {
-        "version": "1.0.0",
-        "minEngine": "0.1.0",
-        "url": "specs/alfa-1.0.0.ubx",
-        "sha256": "edd35fe8ac51be6fa1931e0e901737b5a8b036ccc5d0ff967cb91ec5503c7d7e",
-        "size": 19359,
+        "version": "1.1.0",
+        "minEngine": "0.2.0",
+        "url": "specs/alfa-1.1.0.ubx",
+        "sha256": "980166472d80cbc6ac771aee9070d3ef05cd0e8ac243bb60d224a843e2e84fb8",
+        "size": 23555,
         "keyId": "dev-2026-11"
       }
     },
@@ -86,7 +86,7 @@
       "shortName": "МТС",
       "color": "#E30611",
       "status": "beta",
-      "statusNote": "Вход через страницу банка (PKCE); живой сессии пока нет.",
+      "statusNote": "Вход через страницу банка; счета, карты и операции читаются живой сессией.",
       "capabilities": [
         "accounts",
         "cards",
@@ -98,11 +98,11 @@
         "sha256": "aff4fa57e32b72126a9ac626219f2e76822b9074e3f647b333ec2f7d278b416b"
       },
       "spec": {
-        "version": "1.0.0",
-        "minEngine": "0.1.0",
-        "url": "specs/mts-1.0.0.ubx",
-        "sha256": "4e18f72d474ddb108f48d0c18edb91e162c17a57aec69c65d9b9f1e8ef02f49e",
-        "size": 15722,
+        "version": "1.1.0",
+        "minEngine": "0.3.1",
+        "url": "specs/mts-1.1.0.ubx",
+        "sha256": "b8de6f1b741e6fe5f10c94076dcf4c5c66788c6519f318ef9d15f59ebac20c29",
+        "size": 12723,
         "keyId": "dev-2026-11"
       }
     }
