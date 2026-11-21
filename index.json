@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-20T18:04:30.041Z",
+  "generatedAt": "2026-11-21T06:39:45.024Z",
   "banks": [
     {
       "id": "tbank",
@@ -20,11 +20,11 @@
         "sha256": "e5d267e746e4aa70ad03d7807a543eeeb11203313985b3bab2e7dd864ca22424"
       },
       "spec": {
-        "version": "1.0.0",
-        "minEngine": "0.1.0",
-        "url": "specs/tbank-1.0.0.ubx",
-        "sha256": "fefa1b75562c350b0f6e71e4999496bff241b88c093083cd18aac9cb487240c9",
-        "size": 55563,
+        "version": "1.0.1",
+        "minEngine": "0.3.5",
+        "url": "specs/tbank-1.0.1.ubx",
+        "sha256": "944826cb9742336f3529f48c21620ba85cbdf9d9ec4f679f8fe384a9bc01f6da",
+        "size": 55880,
         "keyId": "dev-2026-11"
       }
     },
@@ -49,7 +49,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/vtb-1.0.0.ubx",
-        "sha256": "49056ef82440fab1353ee391712104ab8927bebed67befd2f1e4c2f12b37d18a",
+        "sha256": "2c4393c70aeea578ec4a3b19ab31159b16016edfde80e14a93974e64501aaed9",
         "size": 13396,
         "keyId": "dev-2026-11"
       }
@@ -75,7 +75,7 @@
         "version": "1.1.0",
         "minEngine": "0.2.0",
         "url": "specs/alfa-1.1.0.ubx",
-        "sha256": "4fe8757b90b3064e514a69a0040247dee4c4626910d691d1caa1e718aab068c3",
+        "sha256": "e37806dcff6aff7d5fef2518f47408d71441ca71fb9975f693d2482dc5bc25bc",
         "size": 23555,
         "keyId": "dev-2026-11"
       }
@@ -86,7 +86,7 @@
       "shortName": "МТС",
       "color": "#E30611",
       "status": "beta",
-      "statusNote": "Вход через страницу банка; счета, карты и операции читаются живой сессией.",
+      "statusNote": "Вход через страницу MTS ID (mobile-клиент, PKCE), refresh-токен продлевает сессию без человека; счета, карты и операции читаются живой сессией.",
       "capabilities": [
         "accounts",
         "cards",
@@ -98,11 +98,11 @@
         "sha256": "aff4fa57e32b72126a9ac626219f2e76822b9074e3f647b333ec2f7d278b416b"
       },
       "spec": {
-        "version": "1.1.1",
+        "version": "2.0.0",
         "minEngine": "0.3.1",
-        "url": "specs/mts-1.1.1.ubx",
-        "sha256": "172d906e3e4317f6e9926b9773ddf6edba553101b922f4d03fb23894bfb6ba67",
-        "size": 12805,
+        "url": "specs/mts-2.0.0.ubx",
+        "sha256": "15ea21acbdc534f27ca7833ba79a315052922ded102119945f9356b9e060354b",
+        "size": 15143,
         "keyId": "dev-2026-11"
       }
     },
@@ -123,7 +123,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/otp-1.0.0.ubx",
-        "sha256": "2c03af6b06d90f6004124506a671ddbdc1ad057e0be018edc821d75826ac1738",
+        "sha256": "9e5715e068cea0dd714e496c7dd12b51b95b4e7084c24f620018f93948740426",
         "size": 11518,
         "keyId": "dev-2026-11"
       }
@@ -144,7 +144,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/freedom-1.0.0.ubx",
-        "sha256": "c76b62b98cd6af136f4b53e38e76a0a866fde027d963aeb7429f3586a9458bd6",
+        "sha256": "bfc0fed9d85be185d2a6a452ec5aa5dac93eca5e726c50e046873fa4c3bfa9af",
         "size": 6760,
         "keyId": "dev-2026-11"
       }
@@ -165,7 +165,7 @@
         "version": "2.0.0",
         "minEngine": "0.3.4",
         "url": "specs/domrf-2.0.0.ubx",
-        "sha256": "0b64936cefb52e124d4a526ff2aa35b0d35483afdd9de0779a26391f5836f029",
+        "sha256": "8915fdbee8064728fb2f420d89a8476f135bf6644002bf9188615cda3bcf5aca",
         "size": 9937,
         "keyId": "dev-2026-11"
       }
@@ -186,7 +186,7 @@
         "version": "1.0.0",
         "minEngine": "0.3.2",
         "url": "specs/ozon-1.0.0.ubx",
-        "sha256": "504dc9fb7cd400c6786735e324a51e9e3372d825fba08c85c601d32bce8eab67",
+        "sha256": "98aa0f2082d4400aa8cc4cbccf0a319241bd9857d94910ab0832c3796b293eb2",
         "size": 5085,
         "keyId": "dev-2026-11"
       }
@@ -207,7 +207,7 @@
         "version": "1.0.0",
         "minEngine": "0.3.3",
         "url": "specs/sber-1.0.0.ubx",
-        "sha256": "6f3f2495d29f4a02ff8401fc4323ee814ba1e5219af2b330bf7613402e30ce43",
+        "sha256": "103c908ea8075990d79b183d00ed1d9e923f1a95c09bcc71fee8a35a8ef1dda9",
         "size": 4667,
         "keyId": "dev-2026-11"
       }
@@ -227,7 +227,7 @@
         "version": "1.0.0",
         "minEngine": "0.1.0",
         "url": "specs/yandexpay-1.0.0.ubx",
-        "sha256": "dfab9b0ff7e7d74597d416a552d8d0adefe3e03c43fba8c67aff8a69b2167ff1",
+        "sha256": "b60b21d84b3531ef0e0dadde27611a32c11feee627103888ae60eb2086e1ac46",
         "size": 3577,
         "keyId": "dev-2026-11"
       }
