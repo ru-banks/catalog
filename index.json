@@ -126,6 +126,10 @@
         "sha256": "c4cb056841db6bfbc6baef9e1f2b70b3c0ef78ae9b06b64579c68fc3ea58ab22",
         "size": 11518,
         "keyId": "dev-2026-11"
+      },
+      "logo": {
+        "url": "logos/otp.png",
+        "sha256": "1394a67311977bf22e1f23bb97e8bdc4c789ba9b9fa453a74469cc239d107cb8"
       }
     },
     {
@@ -147,6 +151,10 @@
         "sha256": "50f3c214938275eef36266f88f8ea7457b3323b76627e06d13364ee5f59fac0e",
         "size": 6760,
         "keyId": "dev-2026-11"
+      },
+      "logo": {
+        "url": "logos/freedom.png",
+        "sha256": "bf2af42df78689d66767df0e95438854f5b19f3cb6ef01eefdb509fe48e42046"
       }
     },
     {
@@ -168,6 +176,10 @@
         "sha256": "4ebc4b37943db04ea25c78e3ae5055e9fe0d3a9eec2245125519a6121183353d",
         "size": 9937,
         "keyId": "dev-2026-11"
+      },
+      "logo": {
+        "url": "logos/domrf.png",
+        "sha256": "010fdf8ef272178d5c85e881a65fe83381485f5cebb0e777a5e90892545351ec"
       }
     },
     {
@@ -189,6 +201,10 @@
         "sha256": "83582b03614f14679b46b101e2e3376af49cdeb5d9bfe3011d3ebf25f792851b",
         "size": 5085,
         "keyId": "dev-2026-11"
+      },
+      "logo": {
+        "url": "logos/ozon.png",
+        "sha256": "7ae88e7faf86370dcf93f15ebcf0f0305cc28b1467745e943b1f217f779133cc"
       }
     },
     {
@@ -210,6 +226,10 @@
         "sha256": "d5b296c155743ae44174598f03c3750cae700ec9c92042e10120436c0ae1014c",
         "size": 4667,
         "keyId": "dev-2026-11"
+      },
+      "logo": {
+        "url": "logos/sber.png",
+        "sha256": "9cec0b89f483d3d7cb4df10f8213f6822c9980084e1042ea264d0d38ed686563"
       }
     },
     {
@@ -230,6 +250,10 @@
         "sha256": "19ccab7f771a84e880becdd37945de6396da47ced3e4b65e45ceaedb88b06b33",
         "size": 3577,
         "keyId": "dev-2026-11"
+      },
+      "logo": {
+        "url": "logos/yandexpay.png",
+        "sha256": "e02063aea0815d4c0f7e33e01ee983020711e408f75a1e3f76226ba5afa7847f"
       }
     }
   ]
