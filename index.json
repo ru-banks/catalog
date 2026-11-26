@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-26T12:42:11.128Z",
+  "generatedAt": "2026-11-26T13:47:01.497Z",
   "banks": [
     {
       "id": "tbank",
@@ -212,7 +212,7 @@
       "shortName": "Ozon",
       "color": "#005BFF",
       "status": "beta",
-      "statusNote": "Вход целиком в WebView: Ozon ID (телефон и код) и код-пароль банка на finance.ozon.ru, захват по cookie __OBANK_session (4.0.0, ADR-0046). Нативный Ozon ID убран: его блокирует антибот. История — groupOperationsV3 с курсором и периодом; 4.0.1 ограничивает perPage 50 (банк не отдаёт историю при 200).",
+      "statusNote": "Вход целиком в WebView: Ozon ID (телефон и код) и код-пароль банка на finance.ozon.ru, захват по cookie __OBANK_session (4.0.0, ADR-0046). Нативный Ozon ID убран: его блокирует антибот. 4.2.0: продление по требованию — refreshV2, затем тихий fast entry (pinpad + login по biometricToken), без фонового сторожа (ADR-0054). История — groupOperationsV3 с курсором и периодом; perPage не больше 50.",
       "capabilities": [
         "accounts",
         "cards",
@@ -226,11 +226,11 @@
         "sha256": "7ae88e7faf86370dcf93f15ebcf0f0305cc28b1467745e943b1f217f779133cc"
       },
       "spec": {
-        "version": "4.1.0",
+        "version": "4.2.0",
         "minEngine": "0.3.13",
-        "url": "specs/ozon-4.1.0.ubx",
-        "sha256": "3af193d3cfd3c58ef3de2ccd8962afdde9835d442a26f5cd9a30ed5561b78498",
-        "size": 16859,
+        "url": "specs/ozon-4.2.0.ubx",
+        "sha256": "6f3b676f12c1df89788e78c626f6c62a5c9d3f4d6fa8eb5a579be932a254ec3e",
+        "size": 17786,
         "keyId": "spec-2026-11"
       }
     },
