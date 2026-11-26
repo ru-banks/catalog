@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-26T09:41:21.491Z",
+  "generatedAt": "2026-11-26T11:11:27.388Z",
   "banks": [
     {
       "id": "tbank",
@@ -254,11 +254,11 @@
         "sha256": "9cec0b89f483d3d7cb4df10f8213f6822c9980084e1042ea264d0d38ed686563"
       },
       "spec": {
-        "version": "2.2.3",
+        "version": "2.2.4",
         "minEngine": "0.3.14",
-        "url": "specs/sber-2.2.3.ubx",
-        "sha256": "e1a097f41225cf63e5a1401f047ce2576938dbc3652fb604523a523096c44f98",
-        "size": 20058,
+        "url": "specs/sber-2.2.4.ubx",
+        "sha256": "e1175cf689efd4daf99c59c9dfc883ddc478e714515c91f8d09dc0ebf87f85f7",
+        "size": 20068,
         "keyId": "spec-2026-11"
       }
     },
