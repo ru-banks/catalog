@@ -1,0 +1,316 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-11-26T09:27:14.200Z",
+  "banks": [
+    {
+      "id": "tbank",
+      "name": "Т-Банк",
+      "shortName": "Т-Банк",
+      "color": "#FFDD2D",
+      "status": "beta",
+      "statusNote": "Parity на записанных ответах и фейковом SSO; живой вход через спеку не проверялся.",
+      "capabilities": [
+        "accounts",
+        "cards",
+        "transactions"
+      ],
+      "sortOrder": 1,
+      "logo": {
+        "url": "logos/tbank.png",
+        "sha256": "e5d267e746e4aa70ad03d7807a543eeeb11203313985b3bab2e7dd864ca22424"
+      },
+      "spec": {
+        "version": "1.0.3",
+        "minEngine": "0.3.5",
+        "url": "specs/tbank-1.0.3.ubx",
+        "sha256": "a0b807ef9730c2a5c9f13b05a7e051e138bd9fc74dc628dd3d879e5240b4b87e",
+        "size": 55899,
+        "keyId": "spec-2026-11"
+      }
+    },
+    {
+      "id": "vtb",
+      "name": "ВТБ",
+      "shortName": "ВТБ",
+      "color": "#0057FF",
+      "status": "beta",
+      "statusNote": "Мобильный вход и две цепочки продления (прогрев сессии + ежедневный вход кодом доступа) проверены живым аккаунтом.",
+      "capabilities": [
+        "accounts",
+        "cards",
+        "transactions"
+      ],
+      "sortOrder": 2,
+      "logo": {
+        "url": "logos/vtb.png",
+        "sha256": "72a665c8f262dd4db5408f3b7b220dbbc14ee8aa3f2931cbdeb5ee6464dc9445"
+      },
+      "spec": {
+        "version": "2.1.0",
+        "minEngine": "0.3.15",
+        "url": "specs/vtb-2.1.0.ubx",
+        "sha256": "95aecd92105c8593d7d954b9168e30cce35579d789997bfe1281362b6b70d6b4",
+        "size": 38255,
+        "keyId": "spec-2026-11"
+      }
+    },
+    {
+      "id": "alfa",
+      "name": "Альфа-Банк",
+      "shortName": "Альфа",
+      "color": "#EF3124",
+      "status": "beta",
+      "statusNote": "Вход через страницу банка; чтение — через плоский бизнес-API.",
+      "capabilities": [
+        "accounts",
+        "cards",
+        "transactions"
+      ],
+      "sortOrder": 3,
+      "logo": {
+        "url": "logos/alfa.png",
+        "sha256": "e53214db35215a081e1a1003cec48f6163c9fd1fde7191f90c198bf1f9796df0"
+      },
+      "spec": {
+        "version": "1.1.3",
+        "minEngine": "0.2.0",
+        "url": "specs/alfa-1.1.3.ubx",
+        "sha256": "d4e8d367f03926e925f8a147819f45394a63229a6f22aa94f07f607f104da2e6",
+        "size": 23563,
+        "keyId": "spec-2026-11"
+      }
+    },
+    {
+      "id": "mts",
+      "name": "МТС Деньги",
+      "shortName": "МТС",
+      "color": "#E30611",
+      "status": "beta",
+      "statusNote": "Вход через страницу MTS ID (mobile-клиент, PKCE), refresh-токен продлевает сессию без человека; счета, карты и операции читаются живой сессией.",
+      "capabilities": [
+        "accounts",
+        "cards",
+        "transactions"
+      ],
+      "sortOrder": 4,
+      "logo": {
+        "url": "logos/mts.png",
+        "sha256": "aff4fa57e32b72126a9ac626219f2e76822b9074e3f647b333ec2f7d278b416b"
+      },
+      "spec": {
+        "version": "2.0.2",
+        "minEngine": "0.3.1",
+        "url": "specs/mts-2.0.2.ubx",
+        "sha256": "1ea86d0c70b99fb2666896be79e0393544017b73a2c9d0c34614647283fff3ba",
+        "size": 17846,
+        "keyId": "spec-2026-11"
+      }
+    },
+    {
+      "id": "otp",
+      "name": "ОТП Банк",
+      "shortName": "ОТП",
+      "color": "#0A9B4B",
+      "status": "beta",
+      "statusNote": "Вход по СМС и чтение счетов проверены живым клиентом банка; первый вход с нового устройства требует подтверждения личности.",
+      "capabilities": [
+        "accounts",
+        "cards",
+        "transactions"
+      ],
+      "sortOrder": 5,
+      "logo": {
+        "url": "logos/otp.png",
+        "sha256": "1394a67311977bf22e1f23bb97e8bdc4c789ba9b9fa453a74469cc239d107cb8"
+      },
+      "spec": {
+        "version": "1.1.3",
+        "minEngine": "0.3.6",
+        "url": "specs/otp-1.1.3.ubx",
+        "sha256": "a4ca738ed1951a4892486de8c5227dfcdece5b56d01352d756b0ca5b8be527b3",
+        "size": 15053,
+        "keyId": "spec-2026-11"
+      }
+    },
+    {
+      "id": "freedom",
+      "name": "Freedom Bank",
+      "shortName": "Freedom",
+      "color": "#0FBA6A",
+      "status": "beta",
+      "statusNote": "Вход по СМС и чтение счетов/карт проверены живым клиентом; история закрыта KYC-гейтом банка, тихого продления SID нет.",
+      "capabilities": [
+        "accounts",
+        "cards"
+      ],
+      "sortOrder": 6,
+      "logo": {
+        "url": "logos/freedom.png",
+        "sha256": "bf2af42df78689d66767df0e95438854f5b19f3cb6ef01eefdb509fe48e42046"
+      },
+      "spec": {
+        "version": "1.0.0",
+        "minEngine": "0.1.0",
+        "url": "specs/freedom-1.0.0.ubx",
+        "sha256": "8e0ddfa06dcd67911b3020056e504c2c2df524eb72a082031be9e6cf31acad21",
+        "size": 6761,
+        "keyId": "spec-2026-11"
+      }
+    },
+    {
+      "id": "finuslugi",
+      "name": "Финуслуги",
+      "shortName": "Финуслуги",
+      "color": "#FF0508",
+      "status": "beta",
+      "statusNote": "Вход, вклады, кошелёк и история кошелька проверены живым прогоном; кредитные продукты не разобраны.",
+      "capabilities": [
+        "accounts",
+        "transactions"
+      ],
+      "sortOrder": 7,
+      "spec": {
+        "version": "0.2.2",
+        "minEngine": "0.3.15",
+        "url": "specs/finuslugi-0.2.2.ubx",
+        "sha256": "a9871712ccb9a85d24240ee67fd34656262299bba0529b25c117e64db7c41c27",
+        "size": 8580,
+        "keyId": "spec-2026-11"
+      }
+    },
+    {
+      "id": "domrf",
+      "name": "Банк ДОМ.РФ",
+      "shortName": "ДОМ.РФ",
+      "color": "#8A2BE2",
+      "status": "beta",
+      "statusNote": "Мобильный вход (SRP + СМС), offline refresh token на 90 дней, счета/карты, история операций и кэшбэк проверены живой сессией; сертификат Минцифры должен быть в хранилище устройства.",
+      "capabilities": [
+        "accounts",
+        "cards",
+        "transactions",
+        "cashback",
+        "cashbackSelection"
+      ],
+      "sortOrder": 8,
+      "logo": {
+        "url": "logos/domrf.png",
+        "sha256": "010fdf8ef272178d5c85e881a65fe83381485f5cebb0e777a5e90892545351ec"
+      },
+      "spec": {
+        "version": "2.2.1",
+        "minEngine": "0.3.7",
+        "url": "specs/domrf-2.2.1.ubx",
+        "sha256": "b87ab1f159e18e75494c613b5080007f8e5ad2480dd7a2a33c1b8fdf405002c7",
+        "size": 16760,
+        "keyId": "spec-2026-11"
+      }
+    },
+    {
+      "id": "ozon",
+      "name": "Ozon Банк",
+      "shortName": "Ozon",
+      "color": "#005BFF",
+      "status": "beta",
+      "statusNote": "Вход целиком в WebView: Ozon ID (телефон и код) и код-пароль банка на finance.ozon.ru, захват по cookie __OBANK_session (4.0.0, ADR-0046). Нативный Ozon ID убран: его блокирует антибот. История — groupOperationsV3 с курсором и периодом; 4.0.1 ограничивает perPage 50 (банк не отдаёт историю при 200).",
+      "capabilities": [
+        "accounts",
+        "cards",
+        "transactions",
+        "cashback",
+        "cashbackSelection"
+      ],
+      "sortOrder": 9,
+      "logo": {
+        "url": "logos/ozon.png",
+        "sha256": "7ae88e7faf86370dcf93f15ebcf0f0305cc28b1467745e943b1f217f779133cc"
+      },
+      "spec": {
+        "version": "4.1.0",
+        "minEngine": "0.3.13",
+        "url": "specs/ozon-4.1.0.ubx",
+        "sha256": "3af193d3cfd3c58ef3de2ccd8962afdde9835d442a26f5cd9a30ed5561b78498",
+        "size": 16859,
+        "keyId": "spec-2026-11"
+      }
+    },
+    {
+      "id": "sber",
+      "name": "СберБанк",
+      "shortName": "Сбер",
+      "color": "#21A038",
+      "status": "beta",
+      "statusNote": "Вход по карте/СМС в WebView: cookies забираются по признаку UFS-SESSION (2.0.1), продление — серверным пасскодом (pin/begin + pin/logon) по мёртвой сессии. Пасскод device-bound, срока в 24 часа у него нет (2.0.4); адрес кабинета после refresh берётся из Location 302 (2.0.5); SRP — hex и xPrehash:false, Process-Id/CSRF в заголовках (2.0.6), история — UFS /uoh-bh (2.1.0); вход в WebView с чистых cookie и UFS-TOKEN, чтобы не закрывать капчу (2.1.1); 2.1.8 проверяет кабинет до «подключён»; 2.1.9 не требует `sb_user` (пасскод можно пропустить); 2.2.0 — категории и баланс «СберСпасибо» и актуальный UFS-хост из кабинета.",
+      "capabilities": [
+        "accounts",
+        "cards",
+        "transactions",
+        "cashback",
+        "cashbackSelection"
+      ],
+      "sortOrder": 10,
+      "logo": {
+        "url": "logos/sber.png",
+        "sha256": "9cec0b89f483d3d7cb4df10f8213f6822c9980084e1042ea264d0d38ed686563"
+      },
+      "spec": {
+        "version": "2.2.2",
+        "minEngine": "0.3.14",
+        "url": "specs/sber-2.2.2.ubx",
+        "sha256": "1adabcca0e8b86274f0a6eab216c868fcc8887829a74ddc144e0a14dfdf1e6d2",
+        "size": 20034,
+        "keyId": "spec-2026-11"
+      }
+    },
+    {
+      "id": "yandexpay",
+      "name": "Яндекс Пэй",
+      "shortName": "Яндекс Пэй",
+      "color": "#FC3F1D",
+      "status": "beta",
+      "statusNote": "Вход через WebView Яндекс ID с пуш-2FA, цифровой пасскод и чтение кошелька/карт проверены живой сессией 23.11.2026; нативный пароль упирается в antifraud `fv Exception`; история — только DivKit.",
+      "capabilities": [
+        "accounts",
+        "cards"
+      ],
+      "sortOrder": 11,
+      "logo": {
+        "url": "logos/yandexpay.png",
+        "sha256": "e02063aea0815d4c0f7e33e01ee983020711e408f75a1e3f76226ba5afa7847f"
+      },
+      "spec": {
+        "version": "1.3.0",
+        "minEngine": "0.3.8",
+        "url": "specs/yandexpay-1.3.0.ubx",
+        "sha256": "3bf616b55fb9f06f37cacc88944b7c423655b7793ca14ef55d413e82a3444e31",
+        "size": 23351,
+        "keyId": "spec-2026-11"
+      }
+    },
+    {
+      "id": "cifra",
+      "name": "Цифра банк",
+      "shortName": "Цифра",
+      "color": "#1B0A40",
+      "status": "beta",
+      "statusNote": "Живой вход (телефон + счёт, СМС, ПИН) и чтение счёта проверены 25.11.2026; карт и операций на проверенном аккаунте нет — их маппинг данными банка не подтверждён.",
+      "capabilities": [
+        "cards",
+        "transactions"
+      ],
+      "sortOrder": 12,
+      "logo": {
+        "url": "logos/cifra.png",
+        "sha256": "5067ff2f38021978b498260a320623ae40ca791ef33ddf1ab724a7a431f7b782"
+      },
+      "spec": {
+        "version": "1.0.7",
+        "minEngine": "0.3.7",
+        "url": "specs/cifra-1.0.7.ubx",
+        "sha256": "93595b919130efc6421c6680ee2a0f8aec8e0635e19760ef61e43eba6571d332",
+        "size": 14807,
+        "keyId": "spec-2026-11"
+      }
+    }
+  ]
+}

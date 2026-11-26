@@ -1,0 +1,79 @@
+name: Новый банк
+description: Заявка на добавление банка в каталог Unibank
+title: "Банк: "
+labels: ["new-bank"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо, что берётесь за банк. Перед заполнением прочитайте
+        [process.md](https://github.com/ru-banks/catalog/blob/main/docs/process.md),
+        [capabilities.md](https://github.com/ru-banks/catalog/blob/main/docs/capabilities.md)
+        и [ai-agent.md](https://github.com/ru-banks/catalog/blob/main/docs/ai-agent.md),
+        если собираете спецификацию с ИИ-агентом.
+
+        **Не прикладывайте сюда токены, cookie, пароли, реальные номера счетов,
+        PAN, ФИО, телефоны и адреса.** Issue публичный.
+
+  - type: input
+    id: bank-name
+    attributes:
+      label: Название банка
+      placeholder: Например, «Банк Пример»
+    validations:
+      required: true
+
+  - type: input
+    id: bank-id
+    attributes:
+      label: Предлагаемый id
+      description: Короткий латинский идентификатор для каталога и секретов.
+      placeholder: example
+    validations:
+      required: true
+
+  - type: input
+    id: app-version
+    attributes:
+      label: Версия приложения банка и платформа
+      placeholder: 12.3.4, Android 14
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: progress
+    attributes:
+      label: Что уже получилось
+      options:
+        - label: Вход (полный путь до сессии)
+        - label: Продление сессии без человека
+        - label: Список продуктов с балансами
+        - label: История операций
+        - label: Карты
+        - label: Кэшбэк (необязательно)
+        - label: Ничего, только начинаю
+
+  - type: textarea
+    id: blockers
+    attributes:
+      label: Что не получается / где нужна помощь
+      description: Опишите блокеры: антибот, подпись, WebView, непонятные поля.
+      placeholder: Свободный текст.
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Ссылки и заметки
+      description: Ссылки на PR, обезличенные примеры, открытые вопросы.
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Подтверждение
+      options:
+        - label: Я разбираю только свой аккаунт и не использую чужие учётные данные.
+          required: true
+        - label: В заявке нет секретов и персональных данных.
+          required: true
+        - label: Я прочитал(а) документацию по разработке спецификаций.
+          required: true

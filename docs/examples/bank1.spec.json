@@ -1,0 +1,349 @@
+{
+  "schema": 1,
+  "id": "bank1",
+  "version": "1.0.1",
+  "meta": {
+    "name": "Bank 1",
+    "shortName": "Bank 1",
+    "color": "#2F6BFF",
+    "sortOrder": 900,
+    "status": "beta",
+    "statusReason": "Демо-банк для ревью: вымышленные данные и сервер.",
+    "lastVerifiedAt": "2026-11-23"
+  },
+  "baseUrl": "https://demo-banks.unibank-demo.workers.dev/bank1",
+  "hosts": [
+    "demo-banks.unibank-demo.workers.dev"
+  ],
+  "capabilities": [
+    "cards",
+    "transactions",
+    "cashback",
+    "cashbackSelection"
+  ],
+  "auth": {
+    "start": "phone",
+    "steps": {
+      "phone": {
+        "emit": {
+          "kind": "phone",
+          "title": "Телефон",
+          "hint": "Демо-номер: +7 916 123-45-67",
+          "field": "phone"
+        },
+        "next": "start"
+      },
+      "start": {
+        "request": {
+          "method": "POST",
+          "path": "/auth/start",
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          },
+          "json": {
+            "phone": "${digits10($input.phone)}"
+          }
+        },
+        "extract": {
+          "challengeId": "$.challengeId",
+          "maskedPhone": "$.maskedPhone"
+        },
+        "on": [
+          {
+            "when": {
+              "status": 200
+            },
+            "goto": "otp"
+          },
+          {
+            "when": {
+              "status": 404,
+              "path": "$.error",
+              "eq": "user_not_found"
+            },
+            "error": {
+              "kind": "invalid-credentials",
+              "message": "demo user not found"
+            }
+          },
+          {
+            "when": {},
+            "error": {
+              "kind": "unavailable",
+              "message": "demo auth/start failed"
+            }
+          }
+        ]
+      },
+      "otp": {
+        "emit": {
+          "kind": "otp",
+          "title": "Код из СМС",
+          "hint": "Демо-код: 0000",
+          "field": "code",
+          "length": 4,
+          "secret": true
+        },
+        "next": "verify"
+      },
+      "verify": {
+        "request": {
+          "method": "POST",
+          "path": "/auth/verify",
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          },
+          "json": {
+            "challengeId": "${$state.challengeId}",
+            "code": "${$input.code}"
+          }
+        },
+        "store": {
+          "session": {
+            "accessToken": "${$.accessToken}",
+            "refreshToken": "${$.refreshToken}",
+            "expiresAt": "${isoAfter($.expiresIn)}"
+          }
+        },
+        "on": [
+          {
+            "when": {
+              "status": 200
+            },
+            "goto": "done"
+          },
+          {
+            "when": {
+              "status": 401,
+              "path": "$.error",
+              "match": "invalid_code|challenge_expired|too_many_attempts"
+            },
+            "error": {
+              "kind": "invalid-credentials",
+              "message": "demo code rejected"
+            }
+          },
+          {
+            "when": {},
+            "error": {
+              "kind": "unavailable",
+              "message": "demo auth/verify failed"
+            }
+          }
+        ]
+      },
+      "done": {
+        "session": true
+      }
+    },
+    "restartOn": [
+      "phone"
+    ]
+  },
+  "check": {
+    "request": {
+      "method": "GET",
+      "path": "/session",
+      "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer ${$secret.session.accessToken}"
+      }
+    },
+    "ok": [
+      200
+    ]
+  },
+  "refresh": {
+    "onStatus": [
+      401
+    ],
+    "beforeExpirySeconds": 60,
+    "steps": [
+      {
+        "request": {
+          "method": "POST",
+          "path": "/auth/refresh",
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          },
+          "json": {
+            "refreshToken": "${$secret.session.refreshToken}"
+          }
+        },
+        "store": {
+          "accessToken": "${$.accessToken}",
+          "refreshToken": "${$.refreshToken}",
+          "expiresAt": "${isoAfter($.expiresIn)}"
+        }
+      }
+    ]
+  },
+  "read": {
+    "accounts": {
+      "request": {
+        "method": "GET",
+        "path": "/accounts",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+          "Authorization": "Bearer ${$secret.session.accessToken}"
+        }
+      },
+      "items": "$.accounts[*]",
+      "map": {
+        "id": "$.id",
+        "name": "$.name",
+        "kind": "$.kind",
+        "currency": "$.currency",
+        "balance": "moneyMajor($.balance,$.currency)",
+        "creditLimit": "moneyMajor($.creditLimit,$.currency)",
+        "maskedNumber": "$.maskedNumber"
+      }
+    },
+    "cards": {
+      "request": {
+        "method": "GET",
+        "path": "/cards",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+          "Authorization": "Bearer ${$secret.session.accessToken}"
+        }
+      },
+      "items": "$.cards[*]",
+      "map": {
+        "id": "$.id",
+        "accountId": "$.accountId",
+        "name": "$.name",
+        "maskedPan": "$.maskedPan",
+        "expiry": "$.expiry",
+        "status": "if(eq($.status,'ACTIVE'),'active',if(eq($.status,'BLOCKED'),'blocked',if(eq($.status,'EXPIRED'),'expired','unknown')))",
+        "currency": "$.currency"
+      }
+    },
+    "transactions": {
+      "request": {
+        "method": "GET",
+        "path": "/transactions",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+          "Authorization": "Bearer ${$secret.session.accessToken}"
+        },
+        "query": {
+          "accountId": "${$input.accountId}",
+          "from": "${$input.from}",
+          "to": "${$input.to}",
+          "cursor": "${$input.cursor}",
+          "limit": "${$input.limit}"
+        }
+      },
+      "items": "$.transactions[*]",
+      "map": {
+        "id": "$.id",
+        "accountId": "$.accountId",
+        "postedAt": "dateAny($.postedAt)",
+        "amount": "moneyMajor($.amount,$.currency)",
+        "direction": "$.direction",
+        "description": "$.description",
+        "merchant": "$.merchant",
+        "mcc": "$.mcc",
+        "rawCategory": "$.category",
+        "bankStatus": "$.status",
+        "cashback": "if($.cashback,obj('amount',moneyMajor($.cashback.amount,$.currency),'unit','rub'))"
+      },
+      "cursor": "$.nextCursor"
+    }
+  },
+  "cashback": {
+    "programs": {
+      "request": {
+        "method": "GET",
+        "path": "/cashback/programs",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+          "Authorization": "Bearer ${$secret.session.accessToken}"
+        }
+      },
+      "items": "$.programs[*]",
+      "map": {
+        "id": "$.id",
+        "title": "$.title",
+        "unit": "$.unit",
+        "unitLabel": "$.unitLabel",
+        "basePercent": "$.basePercent",
+        "periodFrom": "$.periodFrom",
+        "periodTo": "$.periodTo",
+        "selectionFrom": "$.selectionFrom",
+        "selectionTo": "$.selectionTo",
+        "state": "$.state",
+        "minSelections": "$.minSelections",
+        "maxSelections": "$.maxSelections",
+        "exactSelections": "$.exactSelections",
+        "canDeselect": "$.canDeselect",
+        "earnedMinor": "$.earnedMinor",
+        "options": {
+          "items": "$.categories[*]",
+          "map": {
+            "id": "$.id",
+            "name": "$.name",
+            "percent": "$.percent",
+            "monthlyCapMinor": "$.monthlyCapMinor",
+            "mcc": "$.mcc",
+            "description": "$.description",
+            "selected": "$.selected"
+          }
+        }
+      }
+    },
+    "select": {
+      "request": {
+        "method": "POST",
+        "path": "/cashback/select",
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+          "Authorization": "Bearer ${$secret.session.accessToken}"
+        },
+        "query": {
+          "programId": "${$input.programId}",
+          "categoryId": "${$input.optionId}"
+        }
+      }
+    }
+  },
+  "errors": [
+    {
+      "when": {
+        "status": 429
+      },
+      "error": {
+        "kind": "rate-limited"
+      }
+    },
+    {
+      "when": {
+        "status": 409,
+        "path": "$.error",
+        "eq": "selection_limit"
+      },
+      "error": {
+        "kind": "unsupported",
+        "message": "selection limit reached"
+      }
+    },
+    {
+      "when": {
+        "status": 503
+      },
+      "error": {
+        "kind": "unavailable"
+      }
+    }
+  ]
+}
