@@ -23,7 +23,7 @@
 | `meta` | да | `name`, `shortName?`, `color?`, `sortOrder?`, `status?` (`stable` / `beta` / `blocked`), `statusReason?`, `lastVerifiedAt?`, `legal?`. |
 | `baseUrl` | да | `https://…`; его хост обязан входить в `hosts`. |
 | `hosts` | да | Allowlist хостов. Запрос на хост вне списка отклоняется движком. |
-| `capabilities` | нет | `cards`, `transactions`, `cashback`, `cashbackSelection`; `transferBySbp` зарезервировано (переводы движок не исполняет). `accounts` подразумевается всегда. |
+| `capabilities` | нет | `cards`, `transactions`, `cashback`, `cashbackSelection`, `cashbackHistory`; `transferBySbp` зарезервировано (переводы движок не исполняет). `accounts` подразумевается всегда. |
 | `const` | нет | Константы, доступные в выражениях как `$const.*`. |
 | `auth` | да | Граф авторизации: `start` + `steps`. |
 | `read` | нет | Коллекции `accounts`, `cards`, `transactions`. |
@@ -634,6 +634,37 @@ UI), `code` (выражение с кодом банка для логов), `re
 - `single: true` — весь ответ считается одной программой.
 - `items` может быть выражением.
 - Во вложенной коллекции — `filter` и `uniqueBy`.
+- `leadingInts($input.optionIds)` берёт ведущее целое из id (`"169-1"` → 169),
+  когда запись ждёт числа, а банк отдаёт строки.
+
+### 7.1. Начислено по месяцам — `cashback.history`
+
+Необязательное чтение рядом с программами. Одна строка — один месяц:
+
+```json
+"history": {
+  "request": { "method": "GET", "path": "/cashback/history" },
+  "items": "$.months[*]",
+  "map": {
+    "periodKey": "$.period",
+    "title": "$.title",
+    "status": "$.status",
+    "amounts": {
+      "items": "$.amounts[*]",
+      "map": {
+        "unit": "$.unit",
+        "unitLabel": "$.unitLabel",
+        "amount": "wireMoney($)"
+      }
+    }
+  }
+}
+```
+
+Движок отдаёт `CashbackHistoryEntry[]`: `periodKey` (`YYYY-MM`), `status`
+(`received | expected`), `amounts[{unit, unitLabel?, minor}]`. Единицы не
+складываются. Если банк не прислал месяц, спецификация его не придумывает:
+приложение оставляет сохранённую запись локально.
 
 ## 8. Чего в спецификации быть не может
 

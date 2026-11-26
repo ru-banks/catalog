@@ -144,6 +144,8 @@
 
 `capabilities: ["cashback"]` + `cashback.programs` — программы и категории.
 `capabilities: ["cashbackSelection"]` + `cashback.select` — выбор категорий.
+`capabilities: ["cashbackHistory"]` + `cashback.history` — начислено и ожидается
+по месяцам, отдельными строками единиц (`rub`, `miles`, `points`, …).
 
 Минимальные поля программы: `id`, `title`, `unit` (`rub`/`points`/`miles` или
 свой код), `unitLabel` (как называет банк), `options` (массив категорий).
@@ -182,6 +184,7 @@
 | `transactions` | История операций. |
 | `cashback` | Экран программ кэшбэка. |
 | `cashbackSelection` | Возможность выбрать категории. |
+| `cashbackHistory` | Начислено/ожидается по месяцам в карточке банка. |
 | `transferBySbp` | Зарезервировано; движок переводы не исполняет. |
 
 `capabilities` должны соответствовать тому, что реально описано в секциях
