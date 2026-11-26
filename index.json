@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-26T11:11:27.388Z",
+  "generatedAt": "2026-11-26T12:42:11.128Z",
   "banks": [
     {
       "id": "tbank",
@@ -304,11 +304,11 @@
         "sha256": "5067ff2f38021978b498260a320623ae40ca791ef33ddf1ab724a7a431f7b782"
       },
       "spec": {
-        "version": "1.0.7",
+        "version": "1.0.8",
         "minEngine": "0.3.7",
-        "url": "specs/cifra-1.0.7.ubx",
-        "sha256": "93595b919130efc6421c6680ee2a0f8aec8e0635e19760ef61e43eba6571d332",
-        "size": 14807,
+        "url": "specs/cifra-1.0.8.ubx",
+        "sha256": "9e2201c5ead94e709718dab874a526fb9e2e167a6e75a204d48ce6a3b6d9ea3b",
+        "size": 15182,
         "keyId": "spec-2026-11"
       }
     }
