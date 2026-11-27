@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-26T13:47:01.497Z",
+  "generatedAt": "2026-11-27T09:15:02.297Z",
   "banks": [
     {
       "id": "tbank",
@@ -64,7 +64,8 @@
       "capabilities": [
         "accounts",
         "cards",
-        "transactions"
+        "transactions",
+        "cashbackHistory"
       ],
       "sortOrder": 3,
       "logo": {
@@ -72,11 +73,11 @@
         "sha256": "e53214db35215a081e1a1003cec48f6163c9fd1fde7191f90c198bf1f9796df0"
       },
       "spec": {
-        "version": "1.1.3",
-        "minEngine": "0.2.0",
-        "url": "specs/alfa-1.1.3.ubx",
-        "sha256": "d4e8d367f03926e925f8a147819f45394a63229a6f22aa94f07f607f104da2e6",
-        "size": 23563,
+        "version": "1.2.2",
+        "minEngine": "0.3.18",
+        "url": "specs/alfa-1.2.2.ubx",
+        "sha256": "68979d71df7bd0d379118d9f96248b289154514ae11bda965126e993cf02f1fe",
+        "size": 28748,
         "keyId": "spec-2026-11"
       }
     },
