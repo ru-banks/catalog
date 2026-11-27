@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-27T09:43:26.341Z",
+  "generatedAt": "2026-11-27T09:50:13.184Z",
   "banks": [
     {
       "id": "tbank",
@@ -8,7 +8,7 @@
       "shortName": "Т-Банк",
       "color": "#FFDD2D",
       "status": "beta",
-      "statusNote": "Счета, карты, история и кэшбэк. Живой вход ещё не проверялся — только записанные ответы.",
+      "statusNote": "Счета, карты, история и кэшбэк.",
       "capabilities": [
         "accounts",
         "cards",
@@ -185,7 +185,7 @@
       "shortName": "ДОМ.РФ",
       "color": "#8A2BE2",
       "status": "beta",
-      "statusNote": "Счета, карты, история и кэшбэк. Нужен сертификат Минцифры в хранилище устройства.",
+      "statusNote": "Счета, карты, история и кэшбэк.",
       "capabilities": [
         "accounts",
         "cards",
@@ -269,7 +269,7 @@
       "shortName": "Яндекс Пэй",
       "color": "#FC3F1D",
       "status": "beta",
-      "statusNote": "Кошелёк и карты. Истории операций нет.",
+      "statusNote": "Кошелёк и карты.",
       "capabilities": [
         "accounts",
         "cards"

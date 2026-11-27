@@ -25,17 +25,17 @@ capability lists are in [`index.json`](index.json).
 
 | Bank | Balances | Cards | Transaction history | Cashback and category selection | SBP transfer | Limitations |
 |---|:---:|:---:|:---:|:---:|:---:|---|
-| **T-Bank** | ✓ | ✓ | ✓ | ✓ | — | Live sign-in has not been tested yet — only previously recorded responses. |
+| **T-Bank** | ✓ | ✓ | ✓ | ✓ | — | — |
 | **VTB** | ✓ | ✓ | ✓ | ✓ | — | — |
 | **Alfa-Bank** | ✓ | ✓ | ✓ | ✓ | — | — |
 | **MTS Dengi** | ✓ | ✓ | ✓ | ✓ | — | Only the MTS Dengi bank is supported; MTS Bank and its cards, including the "MTS Dengi" card, are not read. |
 | **OTP Bank** | ✓ | ✓ | ✓ | — | — | — |
 | **Freedom Bank** | ✓ | ✓ | — | — | — | History is unavailable until verification; there is no automatic session refresh. |
 | **Finuslugi** | ✓ | — | ✓ | — | — | History is available only for the wallet; deposits are not included. |
-| **DOM.RF Bank** | ✓ | ✓ | ✓ | ✓ | — | The Mincifry certificate must be installed on the device. |
+| **DOM.RF Bank** | ✓ | ✓ | ✓ | ✓ | — | — |
 | **Ozon Bank** | ✓ | ✓ | ✓ | ✓ | — | — |
 | **SberBank** | ✓ | ✓ | ✓ | ✓ | — | — |
-| **Yandex Pay** | ✓ | ✓ | — | — | — | No transaction history — only balances and cards. |
+| **Yandex Pay** | ✓ | ✓ | — | — | — | — |
 | **Cifra Bank** | ✓ | ✓ | ✓ | — | — | Cards and history have not been tested on a live account. |
 
 SBP transfers are not included in the published specifications yet: the app only
